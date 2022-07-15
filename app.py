@@ -34,7 +34,7 @@ def get_predict(data: Data):
 
     entry_data = data.dict()
 
-    model = load_model('./modelo')
+    model = load_model('modelo')
 
     predict = predict_model(
                     model,
