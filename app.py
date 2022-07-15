@@ -35,7 +35,6 @@ def get_predict(data: Data):
     entry_data = data.dict()
 
     model = load_model('modelo')
-    return {'predict': 'carregou o modelo'}
 
     predict = predict_model(
                     model,
@@ -57,7 +56,9 @@ def get_predict(data: Data):
                         'feature14' : entry_data['feature14'],
                         'feature15' : entry_data['feature15']
                     }])
-            )['Label'][0]
+            )#['Label'][0]
+    
+    return {'predict': 'rodou a predição'}
 
     return {'predict': predict}
 
