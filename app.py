@@ -36,10 +36,13 @@ def get_predict(data: Data):
 
     model = load_model('modelo')
 
-    predict = predict_model(
-                    model,
-                    data=pd.DataFrame([entry_data])
-            )#['Label'][0]
+    try:
+        predict = predict_model(
+                        model,
+                        data=pd.DataFrame([entry_data])
+                )['Label'][0]
+    except Exception as e:
+        return {'erro': e}
 
     return {'predict': predict}
 
