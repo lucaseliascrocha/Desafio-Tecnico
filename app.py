@@ -36,15 +36,12 @@ def get_predict(data: Data):
 
     model = load_model('modelo')
 
-    try:
-        predict = predict_model(
-                        model,
-                        data=pd.DataFrame([entry_data])
-                )#['Label'][0]
-    except Exception as e:
-        return {'erro': e}
+    predict = predict_model(
+                    model,
+                    data=pd.DataFrame([entry_data])
+            )#['Label'][0]
 
-    return {'predict': predict}
+    return {'predict': 'predict'}
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
