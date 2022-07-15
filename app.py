@@ -40,7 +40,7 @@ def get_predict(data: Data):
         predict = predict_model(
                         model,
                         data=pd.DataFrame([entry_data])
-                )['Label'][0]
+                )#['Label'][0]
     except Exception as e:
         return {'erro': e}
 
