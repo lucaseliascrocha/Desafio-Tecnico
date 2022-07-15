@@ -36,7 +36,7 @@ def get_predict(data: Data):
 
     model = load_model('./modelo')
 
-    prediction = predict_model(
+    predict = predict_model(
                     model,
                     data=pd.DataFrame([{
                         'feature0' : entry_data['feature0'],
@@ -58,7 +58,7 @@ def get_predict(data: Data):
                     }])
             )['Label'][0]
 
-    return {'message': prediction}
+    return {'predict': predict}
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
