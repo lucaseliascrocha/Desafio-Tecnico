@@ -38,27 +38,8 @@ def get_predict(data: Data):
 
     predict = predict_model(
                     model,
-                    data=pd.DataFrame([{
-                        'feature0' : entry_data['feature0'],
-                        'feature1' : entry_data['feature1'],
-                        'feature2' : entry_data['feature2'],
-                        'feature3' : entry_data['feature3'],
-                        'feature4' : entry_data['feature4'],
-                        'feature5' : entry_data['feature5'],
-                        'feature6' : entry_data['feature6'],
-                        'feature7' : entry_data['feature7'],
-                        'feature8' : entry_data['feature8'],
-                        'feature9' : entry_data['feature9'],
-                        'feature10' : entry_data['feature10'],
-                        'feature11' : entry_data['feature11'],
-                        'feature12' : entry_data['feature12'],
-                        'feature13' : entry_data['feature13'],
-                        'feature14' : entry_data['feature14'],
-                        'feature15' : entry_data['feature15']
-                    }])
-            )#['Label'][0]
-    
-    return {'predict': 'rodou a predição'}
+                    data=pd.DataFrame([entry_data])
+            )['Label'][0]
 
     return {'predict': predict}
 
