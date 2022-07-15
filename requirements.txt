@@ -1,8 +1,29 @@
-FastAPI
-uvicorn
-numpy
-scipy
-scikit-learn>=0.18
-matplotlib
-pandas
-pycaret
+pycaret==2.3.3
+numpy  # Can't >=1.22 because of sktime/numba
+catboost
+fastapi==0.78.0
+pandas==1.4.3
+pydantic==1.9.0
+uvicorn==0.17.6
+python-multipart==0.0.5
+statsmodels==0.13.2
+scipy<1.9.0  # Can't >=1.9.0 due to sktime
+joblib>=1.1.0
+scikit-learn==0.23.2
+pyod>=0.9.8
+imbalanced-learn==0.7.0
+category-encoders>=2.4.0
+lightgbm==2.3.1
+numba~=0.55.0
+requests>=2.27.1  # Required by pycaret.datasets
+psutil>=5.9.0
+
+PyJWT==2.0.0
+bcrypt==3.2.0
+cffi==1.14.4
+click==7.1.2
+h11==0.12.0
+passlib==1.7.4
+pycparser==2.2
+six==1.15.0
+starlette==0.19.1
