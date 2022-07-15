@@ -33,9 +33,9 @@ def index():
 def get_predict(data: Data):
 
     entry_data = data.dict()
-    return {'predict': 'entrou na função'}
 
     model = load_model('modelo')
+    return {'predict': 'carregou o modelo'}
 
     predict = predict_model(
                     model,
