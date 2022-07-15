@@ -1,5 +1,5 @@
-from fastapi import FastAPI
 import uvicorn
+from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 from pycaret.classification import load_model, predict_model
@@ -27,10 +27,10 @@ app = FastAPI()
 @app.get('/')
 
 def index():
-    return {'message': "This is the home page of this API. Go to /prediction"}
+    return {'message': "This is the home page of this API. Go to /predict"}
 
-@app.post('/prediction')
-def get_prediction(data: Data):
+@app.post('/predict')
+def get_predict(data: Data):
 
     entry_data = data.dict()
 
@@ -61,4 +61,4 @@ def get_prediction(data: Data):
     return {'message': prediction}
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=4000, debug=True)
+    uvicorn.run(app, host='127.0.0.1', port=8000)
