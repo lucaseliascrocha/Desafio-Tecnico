@@ -27,7 +27,7 @@ app = FastAPI()
 @app.get('/')
 
 def index():
-    return {'message': "This is the home page of this API. Go to /predict"}
+    return {'message': "This is the home page of this API. Go to /doc"}
 
 @app.post('/predict')
 def get_predict(data: Data):
