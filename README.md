@@ -9,24 +9,26 @@ Verifica-se que não há dados faltantes e todos são numéricos. Agora, com o a
 
 ### Aspectos que chamaram atenção
 - Boa distribuição de classes;
-    - 0: 44,2%
-    - 1: 55,8%
+  - 0: 44,2%
+  - 1: 55,8%
 - Nenhuma feature com variância zero;
 - Features com grande proporção de valores distintos (acima de 90%):
-    - feature3: 98.3%
-    - feature4: 94.4%
-    - feature7: 100%
-    - feature9: 99.8%
-    - feature10: 95.7%
+  - feature3: 98.3%
+  - feature4: 94.4%
+  - feature7: 100%
+  - feature9: 99.8%
+  - feature10: 95.7%
 
 Apesar dessa grande proporção de valores distintos, não vemos correlação desse comportamento com a simetria da distribuição de valores. No geral, as features apresentam uma assimetria em suas distribuições de valores, em destaque para as features feature7 e feature11. Essa característica pode resultar em complicações para alguns tipos de algoritmos de ML.
 
 - Alta correlação entre features:
-    - feature0 e feature15
-    - feature0 e feature4
-    - feature2 e feature15
-    - feature4 e feature15
-    - feature6 e feature9
+  - feature0 e feature15
+  - feature0 e feature4
+  - feature2 e feature15
+  - feature4 e feature15
+  - feature6 e feature9  
+
+![alt text](/imagens/Correla%C3%A7%C3%A3o.png)
 
 - As classes se concentram nas mesmas regiões de valores para cada feature. Porém, podemos observar outliers.
 
@@ -89,23 +91,23 @@ Abaixo temos o melhor modelo obtido com uma divisão dos dados em 80% treino e 2
 
 - Algoritmo: Gradient Boosting Classifier (GBC)
 - Parâmetros:
-    - ccp_alpha: 0.0
-    - criterion: friedman_mse
-    - learning_rate: 0.15
-    - loss: deviance
-    - max_depth: 1
-    - max_features: log2
-    - min_impurity_decrease: 0.5
-    - min_samples_leaf: 3
-    - min_samples_split: 2
-    - min_weight_fraction_leaf: 0.0
-    - n_estimators: 270
-    - subsample: 0.55
-    - tol: 0.0001
-    - validation_fraction: 0.1
-    - verbose: 0
-    - warm_start: False
-  
+  - ccp_alpha: 0.0
+  - criterion: friedman_mse
+  - learning_rate: 0.15
+  - loss: deviance
+  - max_depth: 1
+  - max_features: log2
+  - min_impurity_decrease: 0.5
+  - min_samples_leaf: 3
+  - min_samples_split: 2
+  - min_weight_fraction_leaf: 0.0
+  - n_estimators: 270
+  - subsample: 0.55
+  - tol: 0.0001
+  - validation_fraction: 0.1
+  - verbose: 0
+  - warm_start: False
+
 ## Avaliação da Performance do Modelo
 (Detalhes em `Modelagem_e_Avliação.ipynb`)
 
